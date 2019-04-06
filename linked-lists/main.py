@@ -9,25 +9,6 @@ third = Node(3)
 list_root.head.next = second
 second.next = third
 
-list_root = list_root.head
-
-while list_root:
-    print(list_root.data)
-    list_root = list_root.next
-
-'''
-            Visualization to the current state
-     So all three nodes are linked.
-
-    list_root.head        second              third
-         |                |                  |
-         |                |                  |
-    +----+------+     +----+------+     +----+------+
-    | 1  |  o-------->| 2  |  o-------->|  3 | null |
-    +---
-'''
-
-
 '''
 So Linked list provides the following two advantages over arrays
 1) Dynamic size
@@ -38,3 +19,14 @@ Linked lists have following drawbacks:
 2) Extra memory space for a pointer is required with each element of the list.
 3) Arrays have better cache locality that can make a pretty big difference in performance.
 '''
+
+llist = LinkedList()
+llist.append(6)
+llist.push(7);
+llist.push(1);
+llist.append(4)
+
+# Insert 8, after 7. So linked list becomes 1 -> 7-> 8-> 6-> 4-> None
+llist.insertAfter(llist.head.next, 8)
+
+llist.printAll()
