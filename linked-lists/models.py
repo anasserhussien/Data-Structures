@@ -63,3 +63,11 @@ class LinkedList:
         while list_root:
             print(list_root.data)
             list_root = list_root.next
+
+    def getCount(self):
+        curr = self.head
+        size = 0
+        while curr:
+            curr = curr.next
+            size+=1
+        return size
