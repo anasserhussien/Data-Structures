@@ -30,3 +30,6 @@ llist.append(4)
 llist.insertAfter(llist.head.next, 8)
 
 llist.printAll()
+print('---------------------')
+llist.deleteNode(3)
+llist.printAll()

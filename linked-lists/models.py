@@ -34,7 +34,28 @@ class LinkedList:
                 curr = curr.next
             curr.next = new_node
 
+    def deleteNode(self,k):
 
+        curr_head = self.head
+        _prev = curr_head
+        _next = None
+        if k == 1:
+            self.head = self.head.next
+            _prev = None
+            return self.head
+        while k > 1:
+            _prev = curr_head
+            curr_head = curr_head.next
+            k-=1
+
+        if _prev.next is None:
+            _next = None
+        else:
+            _next = _prev.next.next
+        temp = _prev.next
+        _prev.next = _next
+        temp = None
+        return self.head
 
     def printAll(self):
         # print the whole list
