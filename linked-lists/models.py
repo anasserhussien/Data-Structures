@@ -71,3 +71,13 @@ class LinkedList:
             curr = curr.next
             size+=1
         return size
+
+    def reverse(self):
+        prev = None
+        curr = self.head
+        while curr:
+            next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+        self.head = prev
